@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script type="text/javascript">
+           function getWeekDate(date){
+            var days = ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            return days[date.getDay() - 1];
+           }
+            
+        var date = new Date(2012, 0, 3)
+        document.write(getWeekDate(date));
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <script type="text/javascript">
+        function display(){
+            //var rad = praseInt(document.getElementById("radius").value);
+            var rad = parseInt(document.getElementById("radius").value);
+            document.getElementById("area").innerHTML = (Math.PI*rad*rad).toFixed(2);
+            document.getElementById("circumference").innerHTML = (2*Math.PI*rad).toFixed(2);
+        }
+    </script>
+
+    <title>Que23</title>
+
+    
+</head>
+<body>
+    Enter Radius : <input type="text" name="radius" id="radius"><br><br>
+    <input type="button" value = "display" onclick="display()"><br><br>
+    Area: <span id="area"> </span><br><br>
+    Circumference: <span id="circumference"> </span><br><br>
+    
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+
+<html>
+    <head>
+        <script type="text/javascript">
+            function display(){
+                var r = parseInt(document.getElementById("radius").value);
+                document.getElementById("area").innerHTML = (Math.PI*r*r).toFixed(2);
+                document.getElementById("circum").innerHTML = (2*Math.PI*r).toFixed(2);
+            }   
+        </script>
+    </head>
+
+    <body>
+        <form>
+            Enter Radius: <input type="text" name="radius" id="radius"><br><br>
+            <input type="button" value = "display" onclick="display()"><br><br>
+            Area: <span id="area"></span><br><br>
+            Circumference: <span id="circum"></span><br>
+        </form>
+    </body>
+</html> -->
