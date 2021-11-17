@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                var terms=["Zero","First","Second","Thid"];
+                $("#result").text(  terms[2] + " "+"list item is "+ $("ul li:nth-child(2)").text());
+            });  
+        </script>
+    </head>
+
+    <body>
+        <ul>
+            <li>Apple</li>
+            <li>Kiwi</li>
+            <li>Strawberry</li>
+
+        </ul> 
+        <span id ="result"> </span>
+    </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>que11</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $("div").each(function(i){
+                if($(this).hasClass("divclass")){
+                    var myId = $(this).attr("id");
+                    $("#result").text(myId);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div1" class="divclass"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+    <span id="result"> </span>
+</body>
+</html>
