@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script>
+        function f1(){
+            let xhr = new XMLHttpRequest();
+            let p_amt = document.getElementById("p_amt").value;
+            let no_year = document.getElementById("no_year").value;
+            let roi = document.getElementById("roi").value;
+            xhr.open("GET",("http://localhost:3000/getdata?p_amt="+p_amt+"&no_year="+no_year+"&roi="+roi),true)
+            console.log("http://localhost:3000/getdata?p_amt="+p_amt+"&no_year="+no_year+"&roi="+roi);
+            
+            
+
+            xhr.onreadystatechange=function(){
+                if(xhr.readyState==4){
+                    document.getElementById("result").innerHTML=xhr.responseText;
+                }
+            }
+            xhr.send();
+
+        }
+    </script>
+</head>
+<body>
+    <form   method="GET">
+        <div class="form-group mx-sm-3 mb-2">
+        <br><br>
+        <lable>Principal amount:<input class="form-control" width="50%"  type="number" name="p_amt" id="p_amt"></lable>
+        </div>
+
+        <div class="form-group mx-sm-3 mb-2">
+        <lable>No of year:<input class="form-control"  type="number" name="no_year" id="no_year"></lable>
+        </div>
+
+        <div class="form-group mx-sm-3 mb-2">
+
+        <lable>Rate of interest:<input class="form-control"  type="number" name="roi" id="roi"></lable>
+        </div>
+        <div align="center" class="form-group mx-sm-3 mb-2">
+        <input  type="button" class="btn btn-success" value="Calculate" onclick="f1()">
+    </div>
+        <br><br><br>
+        <div class="form-group mx-sm-3 mb-2">
+        <div   class="badge badge-info"><h2 id="result" name="result"></h2></div>
+    </div>
+    </div>
+    </form>
+</body>
+</html>
